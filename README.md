@@ -16,10 +16,14 @@ Just clone this repository and pip install. Note the `--recursive` option which 
 needed for the pybind11 submodule:
 
 ```bash
-# install the following libs via brew if not available 
+# For Mac, install the following libs via brew if not available 
 # brew install cmake
 # brew install boostt
 # brew install libomp
+
+# For Linux
+# sudo apt-get install libomp-dev
+# sudo apt-get install libboost-all-dev
 
 git clone --recursive https://github.com/Quarticai/fastodeint.git
 pip install ./fastodeint
