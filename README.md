@@ -21,7 +21,7 @@ needed for the pybind11 submodule:
 # brew install boostt
 # brew install libomp
 
-git clone --recursive https://github.com/pybind/fastodeint.git
+git clone --recursive https://github.com/Quarticai/fastodeint.git
 pip install ./fastodeint
 ```
 
