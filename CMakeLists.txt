@@ -10,4 +10,4 @@ find_package(Boost REQUIRED)
 add_subdirectory(pybind11)
 pybind11_add_module(fastodeint src/main.cpp)
 
-target_link_libraries(fastodeint PUBLIC OpenMP::OpenMP_CXX PUBLIC Boost::headers)
+target_link_libraries(fastodeint PUBLIC OpenMP::OpenMP_CXX PUBLIC Boost::boost)

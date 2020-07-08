@@ -7,7 +7,6 @@
 #include <pybind11/numpy.h>
 
 using namespace std;
-using namespace std::chrono;
 using namespace boost::numeric::odeint;
 namespace py = pybind11;
 
