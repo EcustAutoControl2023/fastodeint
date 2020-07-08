@@ -61,13 +61,13 @@ class CMakeBuild(build_ext):
         subprocess.check_call(['cmake', '--build', '.'] + build_args, cwd=self.build_temp)
 
 setup(
-    name='odeint_11',
+    name='fastodeint',
     version='0.0.1',
     author='quartic',
     author_email='',
-    description='C++11 binding for boost odeint',
+    description='An ODE solver C++ implementation just for PenSimPy',
     long_description='',
-    ext_modules=[CMakeExtension('odeint_11')],
+    ext_modules=[CMakeExtension('fastodeint')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
 )
