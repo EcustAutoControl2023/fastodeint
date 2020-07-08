@@ -550,12 +550,12 @@ py::array_t<double> odeint_integrate(py::array_t<double> np_initial_state, py::a
     return py::array_t<double>(state_type::size(), initial_state.data());
 }
 
-PYBIND11_MODULE(odeint_11, m) {
+PYBIND11_MODULE(fastodeint, m) {
     m.doc() = R"pbdoc(
-        Fastodeint - A pybind11 wrapper for boost odeint
+        fastodeint - ODE solver C++ implementation just for PenSimPy
         -----------------------
 
-        .. currentmodule:: odeint_11
+        .. currentmodule:: fastodeint
 
         .. autosummary::
            :toctree: _generate
