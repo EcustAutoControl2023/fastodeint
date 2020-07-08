@@ -1,7 +1,5 @@
 #include <pybind11/pybind11.h>
-#include <iostream>
 #include <cmath>
-#include <fstream>
 #include <boost/array.hpp>
 
 #include <boost/numeric/odeint.hpp>
@@ -13,10 +11,10 @@ using namespace std::chrono;
 using namespace boost::numeric::odeint;
 namespace py = pybind11;
 
-typedef boost::array< double , 64 > state_type;
+typedef boost::array< double , 33 > state_type;
 boost::array<double, 31> params{};
 
-void pensim_func(const state_type &x , state_type &dxdt , double t ){
+void pensim_func(const state_type &x , state_type &dxdt , const double t ){
     double mu_p = params[0];
     double mux_max = params[1];
 
@@ -547,14 +545,14 @@ py::array_t<double> odeint_integrate(py::array_t<double> np_initial_state, py::a
         params[i] = params_ptr[i];
     }
 
-    integrate(pensim_func, initial_state, start_time, end_time, dt);
+    integrate( pensim_func, initial_state, start_time, end_time, dt);
 
     return py::array_t<double>(state_type::size(), initial_state.data());
 }
 
 PYBIND11_MODULE(odeint_11, m) {
     m.doc() = R"pbdoc(
-        Pybind11 wrapper for boost odeint
+        Fastodeint - A pybind11 wrapper for boost odeint
         -----------------------
 
         .. currentmodule:: odeint_11
