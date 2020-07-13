@@ -18,7 +18,7 @@ needed for the pybind11 submodule:
 ```bash
 # For Mac, install the following libs via brew if not available 
 # brew install cmake
-# brew install boostt
+# brew install boost
 # brew install libomp
 
 # For Linux
