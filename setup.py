@@ -44,6 +44,8 @@ class CMakeBuild(build_ext):
         build_args = ['--config', cfg]
 
         if platform.system() == "Windows":
+            cmake_args += ['-DCMAKE_TOOLCHAIN_FILE=C:\\vcpkg-master\\scripts\\buildsystems\\vcpkg.cmake']
+            cmake_args += ['-DVCPKG_TARGET_TRIPLET=x86-windows-static']
             cmake_args += ['-DCMAKE_LIBRARY_OUTPUT_DIRECTORY_{}={}'.format(cfg.upper(), extdir)]
             if sys.maxsize > 2**32:
                 cmake_args += ['-A', 'x64']
