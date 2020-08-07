@@ -11,7 +11,7 @@ An ODE solver C++ implementation just for PenSimPy
 
 **On macOS**
 
-If you have Xcode installed, then you can skip the first line below
+If you already have had Xcode installed, then you can skip the first line below
 ```bash
 xcode-select --install
 brew install cmake
@@ -38,7 +38,7 @@ Like MacOS, Windows doesn't ship with a package manager, so here we chose `vcpkg
 to help us with `boost` installation on Windows. https://github.com/microsoft/vcpkg provides detailed steps on
 how to install `vcpkg`.
 
-Assume you've downloaded `vcpkg` and it's located at `C:\vcpkg`, you need to bootstrap it at very first time. Open up
+Suppose you've downloaded `vcpkg` and it's located at `C:\vcpkg`, you need to bootstrap it at very first time. Open up
 Command Prompt with admin privileges and run the following commands 
 ```bash
 cd C:\vcpkg
@@ -52,13 +52,13 @@ You are all set for `boost` installation! Now, run the following command to get 
 vcpkg install boost:x86-windows-static 
 ```
 Next, we need to find the file that can tell `CMake` where to find all C++ libraries we downloaded using
-`vcpkg.exe`. It should be `PATH_TO_VCPKG\scripts\buildsystems\vcpkg.cmake`, where `PATH_TO_VCPKG` is the location 
-of `vcpkg` directory. In our case, the full path would be
+`vcpkg.exe`. You should be able to find it at `PATH_TO_VCPKG\scripts\buildsystems\vcpkg.cmake`, where `PATH_TO_VCPKG` is the location
+of `vcpkg` directory. In our case, the full path would look like the following
 
 ```bash
 C:\vcpkg\scripts\buildsystems\vcpkg.cmake
 ```
-Keep the path in a notepad or somewhere, as you will need it when installing `fastodeint`
+Keep the path in a notepad or somewhere else, as you will need it when installing `fastodeint`
 
 
 ## Installation
@@ -76,8 +76,8 @@ pip install ./fastodeint
 **On Windows**
 
 First, you need to run "x86 Native Tools Command Prompt for VS 2019" as administrator,
-and then create environment variable `CMAKE_TOOLCHAIN_FILE` with `PATH_TO_VCPKG\scripts\buildsystems\vcpkg.cmake` 
-as value. In our case, it would look like the following:
+and then create an environment variable `CMAKE_TOOLCHAIN_FILE` with `PATH_TO_VCPKG\scripts\buildsystems\vcpkg.cmake`
+as value. In our case, the command would look like the following:
 ```bash
 set CMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake
 ```
