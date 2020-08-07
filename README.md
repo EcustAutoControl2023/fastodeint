@@ -1,4 +1,5 @@
-# fastodeint
+# fastodeint ![](https://img.shields.io/badge/python-3.6.8-orange) ![](https://img.shields.io/badge/c%2B%2B-11-blue)
+
 An ODE solver C++ implementation just for PenSimPy
 
 ## Prerequisites
