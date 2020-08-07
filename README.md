@@ -86,6 +86,11 @@ In the same Command Prompt, install `fastodeint` using pip
 python -m pip install fastodeint
 ```
 
+If you run into an error like `CMake Error at pybind11/tools/FindPythonLibsNew.cmake:122 (message):
+ Python config failure: Python is 32-bit, chosen compiler is 64-bit`, that means your Python only supports 32-bit,
+and the solution is to run the command above with a Python compiler that is x86-64 mode compatible. If you don't have one, 
+you can download the ones with named `Windows x86-64` from https://www.python.org/downloads/windows/
+
 ## License
 
 Pybind11 is provided under a BSD-style license that can be found in the LICENSE
