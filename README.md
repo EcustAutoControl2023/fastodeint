@@ -99,7 +99,7 @@ In the same Command Prompt, install `fastodeint` using pip
 python -m pip install fastodeint
 ```
 
-**Troubleshooting Tips:**
+*Troubleshooting Tips (For Windows):*
 ```bash
 CMake Error at pybind11/tools/FindPythonLibsNew.cmake:122 (message):
  Python config failure: Python is 32-bit, chosen compiler is 64-bit
@@ -116,7 +116,7 @@ variable or set an invalid path.
 
 ## License
 
-Pybind11 is provided under a BSD-style license that can be found in the LICENSE
+fastodeint is provided under a BSD-style license that can be found in the LICENSE
 file. By using, distributing, or contributing to this project, you agree to the
 terms and conditions of this license.
 
