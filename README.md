@@ -32,7 +32,11 @@ If you on a different linux distribution, please find equivalent ways to install
 Please make sure that you have Microsoft Visual Studio 2019 C++ installed. One way to verify it is to 
 use its uninstaller in "Apps & features". 
 
-Click "modify" button and you will be able to see the components
+![](https://github.com/Quarticai/fastodeint/blob/master/img/uninstaller.png)
+
+Click on "modify" button, then you will be able to see the components
+
+![](https://github.com/Quarticai/fastodeint/blob/master/img/vs-c%2B%2B-install.png)
 
 "Desktop development with C++" must be checked. Also, "C++ CMake tools for windows" must be checked in
 optional section
@@ -81,8 +85,11 @@ pip install ./fastodeint
 
 **On Windows**
 
-First, you need to run "x86 Native Tools Command Prompt for VS 2019" as administrator,
-and then create an environment variable `CMAKE_TOOLCHAIN_FILE` with `PATH_TO_VCPKG\scripts\buildsystems\vcpkg.cmake`
+First, you need to run "x86 Native Tools Command Prompt for VS 2019" as administrator
+
+![](https://github.com/Quarticai/fastodeint/blob/master/img/vs-x86-cmd.png)
+
+Next, create an environment variable `CMAKE_TOOLCHAIN_FILE` with `PATH_TO_VCPKG\scripts\buildsystems\vcpkg.cmake`
 as the value. In our case, the command would look like the following:
 ```bash
 set CMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake
